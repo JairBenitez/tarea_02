@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="El_Adivino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_mistico" translatesAutoresizingMaskIntoConstraints="NO" id="sJK-M2-eVW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pregunta lo que quieras" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOo-gq-Puy">
+                                <rect key="frame" x="44" y="114" width="287" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-wA-jYi">
+                                <rect key="frame" x="30" y="592" width="315" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Responder"/>
+                                <connections>
+                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBr-CI-RiP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pregunta" translatesAutoresizingMaskIntoConstraints="NO" id="UON-3k-HCA">
+                                <rect key="frame" x="67.666666666666686" y="206" width="240" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Lvl-sM-QvW"/>
+                                    <constraint firstAttribute="height" constant="170" id="o9R-nX-Ys1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEH-Xf-Hkb">
+                                <rect key="frame" x="50" y="396" width="275" height="23.333333333333314"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sJK-M2-eVW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="19b-51-fqm"/>
+                            <constraint firstItem="GEH-Xf-Hkb" firstAttribute="top" secondItem="UON-3k-HCA" secondAttribute="bottom" constant="20" id="E3g-bI-ZbJ"/>
+                            <constraint firstItem="sJK-M2-eVW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EUW-td-dTz"/>
+                            <constraint firstItem="UON-3k-HCA" firstAttribute="top" secondItem="TOo-gq-Puy" secondAttribute="bottom" constant="60" id="Faj-Af-gQD"/>
+                            <constraint firstItem="pzn-wA-jYi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G5s-3R-DZT"/>
+                            <constraint firstItem="TOo-gq-Puy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GYb-eN-pxZ"/>
+                            <constraint firstItem="GEH-Xf-Hkb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="J3w-SY-U9h"/>
+                            <constraint firstAttribute="bottom" secondItem="sJK-M2-eVW" secondAttribute="bottom" id="UOc-Hc-Prk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GEH-Xf-Hkb" secondAttribute="trailing" constant="50" id="Vj5-TD-I7E"/>
+                            <constraint firstItem="sJK-M2-eVW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aTm-q3-UoE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pzn-wA-jYi" secondAttribute="trailing" constant="30" id="fxF-0h-ibI"/>
+                            <constraint firstItem="UON-3k-HCA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ghy-72-wvm"/>
+                            <constraint firstItem="TOo-gq-Puy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="mgm-FD-N6f"/>
+                            <constraint firstItem="GEH-Xf-Hkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sBl-93-Zda"/>
+                            <constraint firstItem="pzn-wA-jYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xYc-3r-pHn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pzn-wA-jYi" secondAttribute="bottom" constant="150" id="zV3-un-0kQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageViewAnswer" destination="UON-3k-HCA" id="g2H-Dt-CzN"/>
+                        <outlet property="labelAnswer" destination="GEH-Xf-Hkb" id="4TN-2t-PsP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.74384236453201"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fondo_mistico" width="196" height="255"/>
+        <image name="pregunta" width="66" height="66"/>
+    </resources>
 </document>
